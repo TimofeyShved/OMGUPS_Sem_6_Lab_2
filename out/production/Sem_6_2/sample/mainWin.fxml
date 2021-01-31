@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MainWinController">
+   <center>
+      <VBox alignment="CENTER" cache="true" nodeOrientation="LEFT_TO_RIGHT" BorderPane.alignment="CENTER">
+         <children>
+            <Label contentDisplay="RIGHT" text="Товар 1">
+               <graphic>
+                  <TextField fx:id="item1" alignment="CENTER_RIGHT" onAction="#init" onKeyPressed="#init" />
+               </graphic>
+            </Label>
+            <Label contentDisplay="RIGHT" text="Товар 2">
+               <graphic>
+                  <TextField fx:id="item2" alignment="CENTER_RIGHT" onAction="#init" onKeyPressed="#init" />
+               </graphic>
+            </Label>
+         </children>
+         <effect>
+            <Blend />
+         </effect>
+      </VBox>
+   </center>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+   <top>
+      <Button id="1" fx:id="button1" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#handleReset" text="Очистить" textAlignment="CENTER" textOverrun="CENTER_WORD_ELLIPSIS" BorderPane.alignment="BOTTOM_CENTER">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Button>
+   </top>
+   <bottom>
+      <VBox prefHeight="67.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label contentDisplay="RIGHT" text="Всего: ">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="itogo" disable="true" onAction="#handleReset" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label contentDisplay="CENTER" text="Среднее: " textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="srznach" disable="true" editable="false" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </bottom>
+   <right>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="100.0" text="Посдедний элемент" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" wrapText="true" />
+            <Label fx:id="lable1" alignment="TOP_CENTER" contentDisplay="CENTER" graphicTextGap="5.0" prefHeight="54.0" prefWidth="107.0" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" wrapText="true" />
+         </children>
+      </VBox>
+   </right>
+</BorderPane>
