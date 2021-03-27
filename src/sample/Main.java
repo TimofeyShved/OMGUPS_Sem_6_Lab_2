@@ -10,14 +10,18 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("mainWin.fxml"));
-        Parent root = loader.load();
-        MainWinController controller = loader.getController();
-        controller.init();
-        primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, 600, 400));
-        primaryStage.show();
+        FXMLLoader loader = new FXMLLoader(); // создаем загрузку FXML
+        loader.setLocation(getClass().getResource("mainWin.fxml"));// добавляем нашу FXML
+
+        Parent root = loader.load();// создаем панель и загружаем наши данные
+
+        MainWinController controller = loader.getController();// создаем контроллер
+        controller.init();// запускаем в контроллере метод init
+
+        primaryStage.setTitle("Hello World");// заголовок формы
+        primaryStage.setScene(new Scene(root, 600, 400));// размеры формы и наша панель, в форму(окно)
+
+        primaryStage.show();// показать форму
     }
 
 

@@ -4,7 +4,7 @@ import javafx.fxml.FXML;
 
 import java.awt.*;
 
-public class Controller {
+public class Controller { // не используеться (Т.Т)
     @FXML
     TextField item1;
     @FXML TextField item2;
